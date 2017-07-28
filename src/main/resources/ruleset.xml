@@ -24,4 +24,5 @@
                         https://github.com/pmd/pmd/issues/520 -->
         </properties>
     </rule>
+    <rule ref="rulesets/java/unusedcode.xml"/>
 </ruleset>
