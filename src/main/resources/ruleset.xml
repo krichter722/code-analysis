@@ -25,4 +25,5 @@
         </properties>
     </rule>
     <rule ref="rulesets/java/unusedcode.xml"/>
+    <rule ref="rulesets/java/strictexception.xml"/>
 </ruleset>
