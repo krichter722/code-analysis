@@ -12,6 +12,8 @@
                 clarified -->
         <exclude name="GuardLogStatement"/>
             <!-- handle later -->
+        <exclude name="JUnitAssertionsShouldIncludeMessage"/>
+            <!-- handle later -->
     </rule>
     <rule ref="category/java/codestyle.xml">
         <exclude name="AtLeastOneConstructor"/>
