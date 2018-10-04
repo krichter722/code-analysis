@@ -91,5 +91,8 @@
         <exclude name="UseConcurrentHashMap"/>
         <exclude name="DoNotUseThreads"/>
     </rule>
-    <rule ref="category/java/performance.xml"/>
+    <rule ref="category/java/performance.xml">
+        <exclude name="AvoidInstantiatingObjectsInLoops"/>
+            <!-- is hardly ever a problem and can be activated on a separate branch if needed -->
+    </rule>
 </ruleset>
