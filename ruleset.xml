@@ -14,6 +14,8 @@
             <!-- handle later -->
         <exclude name="JUnitAssertionsShouldIncludeMessage"/>
             <!-- handle later -->
+        <exclude name="AccessorMethodGeneration"/>
+            <!-- deactived because it causes a large amount of work for legacy projects and only introduces small improvement -->
     </rule>
     <rule ref="category/java/codestyle.xml">
         <exclude name="AtLeastOneConstructor"/>
