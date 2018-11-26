@@ -32,6 +32,8 @@
                 probable cause first -->
         <exclude name="LongVariable"/>
         <exclude name="ShortClassName"/>
+        <exclude name="AvoidFinalLocalVariable"/>
+            <!-- rather nonsense, see https://github.com/pmd/pmd/pull/1482 for details -->
     </rule>
     <rule ref="category/java/codestyle.xml/ShortVariable">
         <properties>
