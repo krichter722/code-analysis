@@ -1,30 +1,3 @@
-autoCorrect: true
-
-test-pattern: # Configure exclusions for test sources
-  active: true
-  patterns: # Test file regexes
-    - '.*/test/.*'
-    - '.*/androidTest/.*'
-    - '.*Test.kt'
-    - '.*IT.kt'
-    - '.*Spec.kt'
-    - '.*Spek.kt'
-  exclude-rule-sets:
-    - 'comments'
-  exclude-rules:
-    - 'NamingRules'
-    - 'WildcardImport'
-    - 'MagicNumber'
-    - 'MaxLineLength'
-    - 'LateinitUsage'
-    - 'StringLiteralDuplication'
-    - 'SpreadOperator'
-    - 'TooManyFunctions'
-    - 'ForEachOnRange'
-    - 'FunctionMaxLength'
-    - 'TooGenericExceptionCaught'
-    - 'InstanceOfCheckForException'
-
 build:
   maxIssues: 0
   weights:
@@ -53,6 +26,9 @@ console-reports:
 
 comments:
   active: true
+  excludes:
+    - '.*Test.kt'
+    - '.*IT.kt'
   CommentOverPrivateFunction:
     active: false
   CommentOverPrivateProperty:
@@ -110,6 +86,9 @@ complexity:
     ignoreStringsRegex: '$^'
   TooManyFunctions:
     active: true
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
     thresholdInFiles: 11
     thresholdInClasses: 11
     thresholdInInterfaces: 11
@@ -138,7 +117,7 @@ empty-blocks:
     active: true
   EmptyFunctionBlock:
     active: true
-    ignoreOverriddenFunctions: false
+    ignoreOverridden: false
   EmptyIfBlock:
     active: true
   EmptyInitBlock:
@@ -159,6 +138,9 @@ exceptions:
     methodNames: 'toString,hashCode,equals,finalize'
   InstanceOfCheckForException:
     active: true
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
   NotImplementedDeclaration:
     active: true
   PrintStackTrace:
@@ -181,6 +163,9 @@ exceptions:
     active: true
   TooGenericExceptionCaught:
     active: true
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
     exceptionNames:
      - ArrayIndexOutOfBoundsException
      - Error
@@ -223,6 +208,9 @@ formatting:
     continuationIndentSize: 4
   MaximumLineLength:
     active: true
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
     maxLineLength: 120
   ModifierOrdering:
     active: true
@@ -236,8 +224,6 @@ formatting:
   NoEmptyClassBody:
     active: true
     autoCorrect: true
-  NoItParamInMultilineLambda:
-    active: true
   NoLineBreakAfterElse:
     active: true
     autoCorrect: true
@@ -261,6 +247,9 @@ formatting:
     autoCorrect: true
   NoWildcardImports:
     active: true
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
     autoCorrect: true
   PackageName:
     active: true
@@ -312,6 +301,9 @@ naming:
     forbiddenName: ''
   FunctionMaxLength:
     active: true
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
     maximumFunctionNameLength: 40
   FunctionMinLength:
     active: true
@@ -325,12 +317,12 @@ naming:
     active: true
     parameterPattern: '[a-z][A-Za-z0-9]*'
     excludeClassPattern: '$^'
-    ignoreOverriddenFunctions: true
+    ignoreOverridden: true
   MatchingDeclarationName:
     active: true
   MemberNameEqualsClassName:
     active: true
-    ignoreOverriddenFunction: true
+    ignoreOverridden: true
   ObjectPropertyNaming:
     active: true
     constantPattern: '[A-Za-z][_A-Za-z0-9]*'
@@ -363,8 +355,14 @@ performance:
     active: true
   ForEachOnRange:
     active: true
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
   SpreadOperator:
     active: false
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
   UnnecessaryTemporaryInstantiation:
     active: true
 
@@ -386,6 +384,9 @@ potential-bugs:
     active: true
   LateinitUsage:
     active: false
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
     excludeAnnotatedProperties: ""
     ignoreOnClassesPattern: ""
   UnconditionalJumpStatementInLoop:
@@ -434,6 +435,9 @@ style:
     maxJumpCount: 1
   MagicNumber:
     active: true
+    excludes:
+      - '.*Test.kt'
+      - '.*IT.kt'
     ignoreNumbers: '-1,0,1,2'
     ignoreHashCodeFunction: true
     ignorePropertyDeclaration: false
